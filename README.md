@@ -53,7 +53,7 @@ Como el archivo de cleanup usa cd, find y cat y no tiene bien definidas las vari
 
 Así que nosotros podemos mover en $PATH y crear un falso cd, que haga /bin/bash, para darnos un terminal con root
 
-´echo /bin/bash > /tmp/cd´
+`echo /bin/bash > /tmp/cd`
 
 ![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/60c5650e-7f76-44d3-a9b7-3fd3c8112347)
 
