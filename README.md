@@ -37,3 +37,39 @@ Escuchando en netcat con nc -lvp 5555
 
 ![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/e001f358-d857-481e-aa00-d1e176bddc46)
 
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/a3b93d13-5e15-41e0-a64c-07f55111ecea)
+
+Hacemos un printenv para ver las variables de entorno y hacemos también un sudo -l para ver permisos
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/698f7437-94ce-4f1c-aab5-232cee87600f)
+
+Vemos un directorio /opt/cleanup.sh
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/48333fd0-f418-4adb-aa1e-424da5ec5dab)
+
+	https://systemweakness.com/linux-privilege-escalation-using-path-variable-manipulation-64325ab05469 Podemos ver que se usa find, cd y cat por ahí podemos manipular para que se nos de root
+
+Podemos manipular la variable path
+
+Como el archivo de cleanup usa cd, find y cat y no tiene bien definidas las variables de entorno, o sea que no las usa desde /bin/cd no especifica la ruta, esto se haría para que sea más seguro
+
+Así que nosotros podemos mover en $PATH y crear un falso cd, que haga /bin/bash, para darnos un terminal con root
+
+´echo /bin/bash > /tmp/cd´
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/60c5650e-7f76-44d3-a9b7-3fd3c8112347)
+
+
+o un PWD
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/3a73f492-c18c-4f0c-b336-4c877cb659c6)
+
+Después de crear nuestro falso cd, lo ponemos en la variable path y especificamos que use ese path para el cleanup.sh
+
+Ponemos este path para ganar el root
+
+Y boom tenemos root
+
+Ya nadamás buscamos la flag
+
+Y listo!
