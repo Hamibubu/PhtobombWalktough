@@ -23,3 +23,17 @@ Vemos el código fuente
 
 Ahí encontramos la clave para hacer el login que está en un link
 Entramos y vemos que podemos hacer requests para descargar imágenes, con burpsuite vemos los parámetros
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/d336c575-9174-48d8-a6a4-ff27e28f5fdc)
+
+Al modificarlos arbitrariamente vemos que el servidor es ruby
+Pero calamos ahora inyectando un reverse shell y lo encodeamos con url para la inyección
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/6d21c526-917a-431a-81a7-4f0999dadc16)
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/a3d260ac-3713-4a56-b128-52f6cad5af51)
+
+Escuchando en netcat con nc -lvp 5555
+
+![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/e001f358-d857-481e-aa00-d1e176bddc46)
+
