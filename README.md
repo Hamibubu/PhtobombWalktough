@@ -2,8 +2,6 @@
 
 HTB machine
 
-## Reconocimiento
-
 Primero hacemos un scaneo con nmap
 
 ![imagen](https://github.com/Hamibubu/PhtobombWalktough/assets/108554878/40b3c9d9-373d-401d-ac1b-b08c6132e3d7)
